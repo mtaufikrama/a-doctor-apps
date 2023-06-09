@@ -4,4 +4,5 @@ class HomeController extends GetxController {
   //TODO: Implement HomeController
 
   final namaBagian = ''.obs;
+
 }

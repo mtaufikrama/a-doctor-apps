@@ -18,7 +18,7 @@ class _WidgetTitlePoliState extends State<WidgetTitlePoli> {
         children: [
           Expanded(
             child:
-                Text("List Antrian Poliklink", style: MyStyle.textTitleBlack),
+                Text("Dokter disekitar", style: MyStyle.textTitleBlack),
           ),
           const SizedBox(
             width: 10,

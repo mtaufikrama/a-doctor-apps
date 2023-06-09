@@ -123,37 +123,76 @@ class AppTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return
+      Container(
+      padding: EdgeInsets.only(right: 5,left: 5),
+      child : Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TextFormField(
-          readOnly: true,
-          controller: textEditingController,
-          cursorColor: Colors.black,
-          onTap: onTextFieldTap,
-          decoration: InputDecoration(
-            filled: true,
-            fillColor: Colors.white,
-            suffixIcon:
-                const Icon(Icons.arrow_drop_down_circle, color: Colors.blue),
-            contentPadding:
-                const EdgeInsets.only(left: 8, bottom: 0, top: 0, right: 15),
-            hintText: hint,
-            border: const OutlineInputBorder(
-              borderSide: BorderSide(
-                width: 0,
-                style: BorderStyle.none,
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(8.0),
+        Row(
+          children: [
+            Expanded(
+              child: TextFormField(
+                readOnly: true,
+                controller: textEditingController,
+                cursorColor: Colors.black,
+                onTap: onTextFieldTap,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Color(0xfff6f6f6),
+                  suffixIcon:
+                  const Icon(Icons.arrow_circle_down_rounded, color: Colors.grey),
+                  contentPadding:
+                  const EdgeInsets.only(left: 8, bottom: 0, top: 0, right: 15),
+                  hintText: hint,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 0,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
+            SizedBox(
+              width: 5,
+            ),
+            Expanded(
+              child:TextFormField(
+                readOnly: true,
+                controller: textEditingController,
+                cursorColor: Colors.black,
+                onTap: onTextFieldTap,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Color(0xfff6f6f6),
+                  suffixIcon:
+                  const Icon(Icons.arrow_circle_down_rounded, color: Colors.grey),
+                  contentPadding:
+                  const EdgeInsets.only(left: 8, bottom: 0, top: 0, right: 15),
+                  hintText: hint,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 0,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
         const SizedBox(
           height: 15.0,
         ),
       ],
+    ),
     );
   }
 }
